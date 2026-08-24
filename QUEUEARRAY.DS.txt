@@ -1,0 +1,171 @@
+Implementation of Queue of array.
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#define MAXQ 100
+int front=0, rear=-1;
+int items[MAXQ];
+int Iempty();
+int Isfull();
+void Insert(int);
+int Delete();
+void Display();
+void main()
+{
+int x;
+char ch='1';
+clrscr();
+while(ch!='4')
+{
+printf("\n1-INSERT");
+printf("\n2-DELETED");
+printf("\n3-DISPLAY");
+printf("\n4-QUIT");
+printf("\nEnter your choice:");
+fflush(stdin);
+ch=getchar();
+switch(ch)
+{
+case '1':
+printf("\nEnter the element to be inserted:");
+scanf("%d",&x);
+Insert(x);
+break;
+case '2':
+x=Delete();
+printf("\nDelete element is %d\n:",x);
+break;
+case '3':
+Display();
+break;
+case '4':
+exit(0);
+break;
+default:
+printf("\nWrong choice!Try again:");
+}
+}
+getch();
+}
+int Isempty()
+{
+if (rear<front)
+return 1;
+else
+return 0;
+}
+int Isfull()
+{
+if(rear==MAXQ-1)
+return 1;
+else
+return 0;
+}
+void Insert(int x)
+{
+if( Isfull())
+{
+printf("\nQueue full");
+return;
+}
+rear++;
+items[rear]=x;
+}
+int Delete()
+{
+int x;
+if(Isempty())
+{
+printf("\n Queue is empty");
+exit(0);
+}
+x=items[front];
+front++;
+return x;
+}
+void Display()
+{
+int i;
+if(Isfull())
+{
+printf("\nQueue is empty");
+return;
+}
+printf("\nElements in the Queue are:\n");
+for(i=front;i<=rear;i++)
+printf("%d\n",items[i]);
+}
+  Output:
+
+1-INSERT
+2-DELETED
+3-DISPLAY
+4-QUIT
+Enter your choice:1
+
+Enter the element to be inserted:34
+
+1-INSERT
+2-DELETED
+3-DISPLAY
+4-QUIT
+Enter your choice:4
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
