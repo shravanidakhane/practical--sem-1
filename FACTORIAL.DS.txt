@@ -1,0 +1,71 @@
+Calculate factorial of a number using recursive function.
+
+#include<stdio.h>
+#include<conio.h>
+int factorial(int);
+void main()
+{
+int i,n;
+clrscr();
+printf("\nEnter the number of element:");
+scanf("%d",&n);
+printf("factorial of %d is %d",n, factorial(n));
+getch();
+}
+int factorial(int n)
+{
+if(n==0)
+return 1;
+else
+return n*factorial(n-1);
+}
+ Output:
+
+
+Enter the number of element:4                                                   
+factorial of 4 is 24                                                            
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
