@@ -1,0 +1,74 @@
+10. Implement a C/C++ program to perfrom ABD,OR,NOT and XOR operation on binary numbers.
+
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i;
+long long bin1,bin2;
+int bit1,bit2;
+int andResult[32],orResult[32],xorResult[32],not1Result[32];
+int count=0;
+clrscr();
+printf("Enter first binary number:");
+scanf("%lld",&bin1);
+printf("Enter second binary number:");
+scanf("%lld",&bin2);
+while(bin1>0||bin2>0)
+{
+bit1=bin1%10;
+bit2=bin2%10;
+andResult[count]=bit1 && bit2;
+orResult[count]=bit1 || bit2;
+xorResult[count]=bit1^bit2;
+not1Result[count]=!bit1;
+bin1=bin1/10;
+bin2=bin2/10;
+count++;
+}
+printf("\n---Results---\n");
+printf("AND: ");
+for(i=count-1;i>=0;i--)printf("%d",andResult[i]);
+printf("\nOR: ");
+for(i=count-1;i>=0;i--)printf("%d",orResult[i]);
+printf("\nXOR: ");
+for(i=count-1;i>=0;i--)printf("%d",xorResult[i]);
+printf("\nNOT(of1st): ");
+for(i=count-1;i>=0;i--)printf("%d",not1Result[i]);
+printf("\n");
+getch();
+}
+
+
+Output:
+
+Enter first binary number:101
+Enter second binary number:110                                                  
+                                                                                
+---Results---                                                                   
+AND: 100                                                                        
+OR: 111
+XOR: 011                                                                        
+NOT(of1st): 010                                                                 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                              i=count-1;i>=0;i--)printf("%d",not1Result[i]);
+printf("\n");
+getch();
+}
+
